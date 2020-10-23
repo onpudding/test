@@ -1,0 +1,10 @@
+import requests
+import pprint
+import json
+url="https://shopping.yahooapis.jp/ShoppingWebService/V1/json/categoryRanking"
+api_id ="dj00aiZpPWVyQlV2UERsaVN4RCZzPWNvbnN1bWVyc2VjcmV0Jng9YzE-"
+category_num="48838"
+offset_num="0"
+response=requests.get(url,params={'appid':api_id,'category_id':category_num,'offset':offset_num})
+json_data=response.json()
+pprint.pprint(response.json())
